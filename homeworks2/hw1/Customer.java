@@ -1,0 +1,55 @@
+package hw1;
+
+public class Customer extends Person {
+	private String address = "-";
+	private Book borrowedBook;
+	private boolean borrowABook;
+
+	public Customer(String name, String birthPlace, int birthDate, String address) {
+		super(name, birthDate, birthPlace);
+		this.address = address;
+	}
+
+	public Customer(String name, int birthDate, String address) {
+		super(name, birthDate);
+		this.address = address;
+	}
+
+	public Customer(String name, String address) {
+		super(name);
+		this.address = address;
+	}
+
+	public Customer(String name, int birthDate) {
+		super(name, birthDate);
+	}
+
+	public String toString() {
+		return "Name: " + getName() + ", Birth Date: " + getBirthDate() +
+				", Birth Place: " + getBirthPlace() + "\nAddress: " + getAddress();
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public Book getBorrowedBook() {
+		return borrowedBook;
+	}
+
+	public void setBorrowedBook(Book borrowedBook) {
+		this.borrowedBook = borrowedBook;
+	}
+
+	public boolean isBorrowABook() {
+		return borrowABook;
+	}
+
+	public void setBorrowABook(boolean borrowABook) {
+		this.borrowABook = borrowABook;
+	}
+}
